@@ -31,7 +31,7 @@ jobs:
          ref: main
          path: ojdbc8-19.3.0.0.jar /sprintboot-app
     - name: Build with Maven
-      run: mvn install com.oracle.jdbc.groupId:ojdbc8:12.2.0.1:version -B package --file pom.xml 
+      run: mvn install com.oracle.groupId:ojdbc8:12.2.0.1:version -B package --file pom.xml 
     - name: create folder
       run: mkdir save && cp /home/runner/work/sprintboot-app/sprintboot-app/target/test-0.0.1-SNAPSHOT-boot.war save
     - name: upload artifiacts
