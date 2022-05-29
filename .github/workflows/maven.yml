@@ -23,13 +23,16 @@ jobs:
         distribution: 'temurin'
         cache: maven
         
-    - uses: actions/checkout@v2
+    #- uses: actions/checkout@v2
     - name: Checkout
       uses: actions/checkout@v2
       with:
          repository: ashapak7867/java-spring-app
+         source_file: ojdbc8-19.3.0.0.jar
+         destination_repo: ashapak7867/sprintboot-app
+         destination_folder: pom.xml
          ref: main
-         path: cp ojdbc8-19.3.0.0.jar //home/runner/work/sprintboot-app/sprintboot-app/pom.xml
+        # path: cp ojdbc8-19.3.0.0.jar //home/runner/work/sprintboot-app/sprintboot-app/pom.xml
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: create folder
