@@ -25,7 +25,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: create folder
-      run: mkdir save && cp home/runner/work/sprintboot-app/sprintboot-app/target/.*war save
+      run: mkdir save && cp /home/runner/work/sprintboot-app/sprintboot-app/target/.*war save
     - name: upload artifiacts
       uses: actions/upload-artifact@v3
       with:
