@@ -23,18 +23,14 @@ jobs:
         distribution: 'temurin'
         cache: maven
         
-    - name: Cache local Maven repository
-      uses: actions/cache@v3
-      env:
-         cache-name: cache-mvn
-      with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-
+    - run: |
+       git clone https://github.com/ashapak7867/java-spring-app@github.com/ target
+       rm everything but the .git directory
+       copy ojdbc8.19.3.0.0 \files target
+       cd target
+       git add .
+       git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/project"
+       git push target main
     - name: Checkout
       uses: actions/checkout@v2
       with:
