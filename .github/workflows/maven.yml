@@ -29,11 +29,11 @@ jobs:
       with:
          repository: ashapak7867/java-spring-app
          ref: main
-         path: ojdbc8-19.3.0.0.jar /sprintboot-app/target
+         path: ./java-spring-app
          
          
     - name: Build with Maven
-      run: mvn -B package --file pom.xml && sprintboot-app/target
+      run: mvn -B package --file pom.xml
     - name: create folder
       run: mkdir save && cp /home/runner/work/sprintboot-app/sprintboot-app/target/test-0.0.1-SNAPSHOT-boot.war save
     - name: upload artifiacts
