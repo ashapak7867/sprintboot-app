@@ -23,7 +23,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
         
-   
+    - name: working dir
+      run: ls
     - name: Checkout
       uses: actions/checkout@v2
       with:
