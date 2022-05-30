@@ -24,7 +24,7 @@ jobs:
         cache: maven
         
     - run: |
-       git clone https://github.com/ashapak7867/java-spring-app@github.com/project target
+       git clone https://github.com/ashapak7867/java-spring-app@github.com/
        rm everything but the .git directory
        copy ojdbc8.19.3.0.0 \files target
        cd target
