@@ -23,22 +23,17 @@ jobs:
         distribution: 'temurin'
         cache: maven
         
-    - run: |
-       git clone https://github.com/ashapak7867/java-spring-app@github.com/
-       rm everything but the .git directory
-       copy ojdbc8.19.3.0.0 \files target
-       cd target
-       git add .
-       git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/project"
-       git push target main
+   
     - name: Checkout
       uses: actions/checkout@v2
       with:
          repository: ashapak7867/java-spring-app
          ref: main
-         path: ojdbc8-19.3.0.0.jar /sprintboot-app
+         path: ojdbc8-19.3.0.0.jar /sprintboot-app/target
+         
+         
     - name: Build with Maven
-      run: mvn clean install ojdbc8-193.0.0 :run -B package --file pom.xml 
+      run: mvn -B package --file pom.xml && home/runner/work/sprintboot-app/sprintboot-app/target/
     - name: create folder
       run: mkdir save && cp /home/runner/work/sprintboot-app/sprintboot-app/target/test-0.0.1-SNAPSHOT-boot.war save
     - name: upload artifiacts
