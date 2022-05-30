@@ -31,8 +31,7 @@ jobs:
          repository: ashapak7867/java-spring-app
          ref: main
          path: ./java-spring-app
-         
-         
+         run: ls
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: create folder
