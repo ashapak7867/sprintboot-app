@@ -35,9 +35,11 @@ jobs:
          
     - name: add subtree 
       run: |
-            git remote add my-subtree git@github.com:ashapak7867/java-spring-app.git
-            chmod 644 my-subtree
-            ls -l my-subtree
+            #git remote add my-subtree git@github.com:ashapak7867/java-spring-app.git
+            git remote set-url origin https://github.com/ashapak7867/java-spring-app.git
+            ls -l 
+          
+            ls
             git subtree add --prefix=resources my-subtree main
             ls
             git push origin main
