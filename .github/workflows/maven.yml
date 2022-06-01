@@ -33,11 +33,10 @@ jobs:
          #path: ./java-spring-app
          #run: ls
     - name: add subtree 
-      run: git remote add my-subtree git@github.com:ashapak7867/java-spring-app.git
-    - name: add subtree in master
-      run: git subtree add —-prefix=resources my-subtree main
-    - name: push changes 
-      run: git push origin main
+      run: |
+            git remote add my-subtree git@github.com:ashapak7867/java-spring-app.git
+            git subtree add —-prefix=resources my-subtree main
+            git push origin main
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: create folder
