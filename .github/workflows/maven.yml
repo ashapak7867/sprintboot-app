@@ -41,6 +41,7 @@ jobs:
           
             ls
             git subtree add --prefix=resources my-subtree main
+            git fetch my-subtree main
             ls
             git push origin main
     - name: Build with Maven
