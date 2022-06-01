@@ -33,7 +33,7 @@ jobs:
          #path: ./java-spring-app
          #run: ls
     - name: add subtree 
-      run: git remote add java-spring-app git@github.com:ashapak7867/java-spring-app.git
+      run: git remote add sprintboot-app git@github.com:ashapak7867/java-spring-app.git
     - name: add subtree in master
       run: git subtree push —-prefix=resources sprintboot-app main
     - name: push changes 
