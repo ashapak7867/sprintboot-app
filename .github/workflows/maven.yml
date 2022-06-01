@@ -35,7 +35,7 @@ jobs:
     - name: add subtree 
       run: git remote add java-spring-app git@github.com:ashapak7867/java-spring-app.git
     - name: add subtree in master
-      run: git subtree add —-prefix=resources java-spring-app main
+      run: git subtree push —-prefix=resources java-spring-app main
     - name: push changes 
       run: git push origin main
     - name: Build with Maven
