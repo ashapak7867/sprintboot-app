@@ -34,9 +34,9 @@ jobs:
          #run: ls
     - name: add subtree 
       run: |
-            git remote add my-subtree git@github.com:ashapak7867/sprintboot-app.git
+            git remote add my-subtree git@github.com:ashapak7867/java-spring-app.git
             ls
-            git subtree add —-prefix=resources my-subtree main
+            git subtree add --prefix=resources my-subtree main
             ls
             git push origin main
     - name: Build with Maven
