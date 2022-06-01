@@ -35,7 +35,8 @@ jobs:
          
     - name: add subtree 
       run: |
-            ssh-keygen -o -t rsa -C "ashapak7867@email.com"
+            ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+            
             cat ~/.ssh/id_rsa.pub
             git remote add my-subtree git@github.com:ashapak7867/java-spring-app.git
             ls
