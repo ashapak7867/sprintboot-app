@@ -34,7 +34,7 @@ jobs:
          #run: ls
     - name: add subtree 
       run: |
-            git remote add my-subtree git@github.com:ashapak7867/java-spring-app.git
+            git remote add my-subtree https://github.com.ashapak7867/java-spring-app.git
             ls
             git subtree add --prefix=resources my-subtree main
             ls
