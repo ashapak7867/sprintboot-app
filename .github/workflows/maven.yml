@@ -32,8 +32,10 @@ jobs:
         # ref: main
          #path: ./java-spring-app
          #run: ls
+         
     - name: add subtree 
       run: |
+            cd ~/.ssh && ssh-keygen
             git remote add my-subtree git@github.com:ashapak7867/java-spring-app.git
             ls
             git subtree add --prefix=resources my-subtree main
