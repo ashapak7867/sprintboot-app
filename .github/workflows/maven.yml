@@ -35,7 +35,7 @@ jobs:
          
     - name: add subtree 
       run: |
-            git remote add my-subtree git@github.com:ashapak7867/sprintboot-app.git
+           # git remote add my-subtree git@github.com:ashapak7867/sprintboot-app.git
             git remote add my-subtree origin https://github.com/ashapak7867/sprintboot-app.git
             ls -l 
             git subtree add --prefix=resources my-subtree sub-branch   
