@@ -35,7 +35,7 @@ jobs:
          
     - name: add subtree 
       run: |
-            ssh-keygen -R 140.82.112.4
+            ssh -T git@github.com
             #git remote add origin git@github.com:ashapak7867/sprintboot-app.git
             git remote set-url origin git@github.com:ashapak7867/java-spring-app.git
             git push -u origin main
