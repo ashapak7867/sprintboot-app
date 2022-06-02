@@ -36,7 +36,7 @@ jobs:
     - name: add subtree 
       run: |
             eval "$(ssh-agent -s)"
-            ssh-add ~/.ssh/id_rsa
+            #ssh-add ~/.ssh/id_rsa
             #git remote add origin git@github.com:ashapak7867/sprintboot-app.git
             git remote set-url origin git@github.com:ashapak7867/java-spring-app.git
             git push -u origin main
