@@ -35,11 +35,10 @@ jobs:
          
     - name: add subtree 
       run: |
-           # git remote add my-subtree git@github.com:ashapak7867/sprintboot-app.git
-            git remote add my-subtree origin https://github.com/ashapak7867/sprintboot-app.git
-            ls -l 
-            git subtree add --prefix=resources my-subtree sub-branch   
-            git push origin main
+            git remote add origin git@github.com:ashapak7867/sprintboot-app.git
+            git remote set-url origin git@github.com:ashapak7867/java-spring-app.git
+            #git remote add my-subtree origin https://github.com/ashapak7867/sprintboot-app.git
+            git push -u origin main
         
         
     - name: Build with Maven
