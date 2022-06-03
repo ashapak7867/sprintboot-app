@@ -27,7 +27,7 @@ jobs:
     #  run: ls
     - name: Checkout job
       run: |
-            git checkout sprintboot-app/sub-branch home/runner/work/ojdbc8.19.3.0.0.jar
+            git checkout main/sub-branch ojdbc8.19.3.0.0.jar
             #git fetch
             #git checkout -b sub-branch 
     #  uses: actions/checkout@v2
