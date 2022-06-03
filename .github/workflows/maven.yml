@@ -28,7 +28,7 @@ jobs:
     - name: Checkout job
       run: |
             git ls-files --others ojdbc8.19.3.0.0..jar
-            git checkout main sub-branch ojdbc8.19.3.0.0.jar
+           # git checkout main sub-branch ojdbc8.19.3.0.0.jar
             #git fetch
             #git checkout -b sub-branch 
     #  uses: actions/checkout@v2
