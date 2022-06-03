@@ -25,9 +25,11 @@ jobs:
         
    # - name: working dir
     #  run: ls
-    #- name: Checkout
-     # uses: actions/checkout@v2
-      #with:
+    - name: Checkout job
+      run: |
+            git checkout sub-branch ojdbc8.19.3.0.0.jar
+    #  uses: actions/checkout@v2
+       #with:
        #  repository: ashapak7867/java-spring-app
         # ref: main
          #path: ./java-spring-app
