@@ -41,8 +41,8 @@ jobs:
          #path: ./java-spring-app
          #run: ls
          
-    - name: checkout file 
-      run: |
+   # - name: checkout file 
+   #   run: |
             
             #eval "$(ssh-agent -s)"
             #ssh-keygen -t rsa -b 4096 -C "my@ashapak7867.com" -f /home/runner/work/to/key.pub
@@ -50,8 +50,8 @@ jobs:
             #2048 SHA256:274ffWxgaxq/tSINAykStUL7XWyRNcRTlcST1Ei7gBQ /java-spring-app/ashapak7867/.ssh/id_rsa (RSA)
             #ssh-add ~/.ssh/id_rsa
             #git remote add origin git@github.com:ashapak7867/sprintboot-app.git
-            git remote set-url origin git@github.com:ashapak7867/java-spring-app.git
-            git push -u origin main
+            #git remote set-url origin git@github.com:ashapak7867/java-spring-app.git
+            #git push -u origin main
         
         
     - name: Build with Maven
