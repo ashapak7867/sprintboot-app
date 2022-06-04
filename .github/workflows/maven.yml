@@ -55,7 +55,7 @@ jobs:
         
         
     - name: Build with Maven
-      run:  mvn -s home/runner/work/sub-branch/ojdbc8.19.3.0.0.jar -B package --file pom.xml
+      run:  mvn -s usr/src/sub-branch/ojdbc8.19.3.0.0.jar -B package --file pom.xml
     - name: create folder
       run: mkdir save && cp /home/runner/work/sprintboot-app/sprintboot-app/target/test-0.0.1-SNAPSHOT-boot.war save
     - name: upload artifiacts
