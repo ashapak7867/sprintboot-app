@@ -27,7 +27,7 @@ jobs:
     #  run: ls
     - name: Checkout job
       run: |
-             git merge sub-branch
+            # git merge sub-branch
             #git reflog
             #git ls-files --others ojdbc8.19.3.0.0..jar
             #git add ojdbc8.19.3.0.0..jar
@@ -41,12 +41,13 @@ jobs:
          #path: ./java-spring-app
          #run: ls
          
-    - name: add subtree 
+    - name: checkout file 
       run: |
-            eval "$(ssh-agent -s)"
-            ssh-keygen -t rsa -b 4096 -C "my@ashapak7867.com" -f /home/runner/work/to/key.pub
-            ssh-add -l -E sha256
-            2048 SHA256:274ffWxgaxq/tSINAykStUL7XWyRNcRTlcST1Ei7gBQ /java-spring-app/ashapak7867/.ssh/id_rsa (RSA)
+            
+            #eval "$(ssh-agent -s)"
+            #ssh-keygen -t rsa -b 4096 -C "my@ashapak7867.com" -f /home/runner/work/to/key.pub
+            #ssh-add -l -E sha256
+            #2048 SHA256:274ffWxgaxq/tSINAykStUL7XWyRNcRTlcST1Ei7gBQ /java-spring-app/ashapak7867/.ssh/id_rsa (RSA)
             #ssh-add ~/.ssh/id_rsa
             #git remote add origin git@github.com:ashapak7867/sprintboot-app.git
             git remote set-url origin git@github.com:ashapak7867/java-spring-app.git
@@ -54,7 +55,7 @@ jobs:
         
         
     - name: Build with Maven
-      run:  mvn -B package --file pom.xml  
+      run:  mvn --file pom.xml && --file /home/runner/work/sub-branch/ojdbc8-19.3.0.0.jar -B package
     - name: create folder
       run: mkdir save && cp /home/runner/work/sprintboot-app/sprintboot-app/target/test-0.0.1-SNAPSHOT-boot.war save
     - name: upload artifiacts
