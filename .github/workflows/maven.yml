@@ -61,7 +61,7 @@ jobs:
      # run: mvn -s $GITHUB_WORKSPACE/.github/workflows/setting.xml -B package --file pom.xml 
       run:  mvn install:install-file
            -Dfile= home/runner/work/sprintboot-app/sprintboot-app/sub-branch/ojdbc8-19.3.0.0.jar
-           -DgroupId=com.oracle.ojdbc 
+           -DgroupId=com.oracle
            -DartifactId=ojdbc8
            -Dversion=19.3.0.0
            -Dpackaging=jar
