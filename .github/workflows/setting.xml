@@ -8,7 +8,7 @@
           <exists>${GITHUB_WORKSPACE}/sub-branch/ojdbc8-19.3.0.0.jar</exists>
               </file>
             
-               <profile>
+               </profile>
             
        
     </profiles>
