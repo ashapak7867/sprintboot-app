@@ -3,14 +3,12 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
     <profiles>
-        <build>
-            <resources>
-                 <resource>
-                     <directory>sub-branch/ojdbc.8.19.3.0.0.jar</directory>
-                 </resource>
-            </resources>
+      
+          
+                      <localRepository>/home/runner/work/sub-branch/ojdbc.8.19.3.0.0.jar</localRepository>
+              
             
-        </build>
+       
     </profiles>
 </settings>
 
