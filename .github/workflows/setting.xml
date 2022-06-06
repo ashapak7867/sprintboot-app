@@ -5,7 +5,7 @@
     <profiles>
       
           
-                      <localRepository>/home/runner/work/sub-branch/ojdbc.8.19.3.0.0.jar</localRepository>
+                      <url>/home/runner/work/sub-branch/ojdbc.8.19.3.0.0.jar</url>
               
             
        
