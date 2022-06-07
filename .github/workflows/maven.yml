@@ -60,12 +60,12 @@ jobs:
      
      # run: mvn -s $GITHUB_WORKSPACE/.github/workflows/setting.xml -B package --file pom.xml 
       run:  mvn install:install-file
-           -Dfile= home/runner/work/sprintboot-app/sprintboot-app/sub-branch/ojdbc8-19.3.0.0.jar
+           -Dfile= /home/runner/work/sprintboot-app/sprintboot-app/sub-branch/ojdbc8-19.3.0.0.jar
            -DgroupId=com.oracle
            -DartifactId=ojdbc8
            -Dversion=19.3.0.0
            -Dpackaging=jar
-           -DgeneratePom=true
+            -X
            #-B package --file pox.xml
     - name: create folder
       run: mkdir save && cp /home/runner/work/sprintboot-app/sprintboot-app/target/test-0.0.1-SNAPSHOT-boot.war save
