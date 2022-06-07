@@ -65,7 +65,7 @@ jobs:
              -DartifactId=ojdbc8
              -Dversion=19.3.0.0
              -Dpackaging=jar
-          
+             -X
              
            #-B package --file pox.xml
     - name: create folder
