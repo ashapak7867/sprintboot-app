@@ -60,12 +60,12 @@ jobs:
      
      # run: mvn -s $GITHUB_WORKSPACE/.github/workflows/setting.xml -B package --file pom.xml 
       run:  mvn install:install-file
-           -Dfile= /sub-branch/ojdbc8-19.3.0.0.jar
-           -DgroupId=com.oracle
-           -DartifactId=ojdbc8
-           -Dversion=19.3.0.0
-           -Dpackaging=jar
-            -X
+             -Dfile=/sub-branch/ojdbc8-19.3.0.0.jar
+             -DgroupId=com.oracle
+             -DartifactId=ojdbc8
+             -Dversion=19.3.0.0
+             -Dpackaging=jar
+          
              
            #-B package --file pox.xml
     - name: create folder
