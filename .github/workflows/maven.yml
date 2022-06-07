@@ -59,7 +59,7 @@ jobs:
      # run:  mvn -c WORKDIR /usr/src/sub-branch/ojdbc8.19.3.0.0.jar -B package --file pom.xml
      
      # run: mvn -s $GITHUB_WORKSPACE/.github/workflows/setting.xml -B package --file pom.xml 
-      run:  mvn install:install-file
+      run:  mvn install:install
            -DgroupId=com.oracle
            -DartifactId=ojdbc8
            -Dversion=19.3.0.0
