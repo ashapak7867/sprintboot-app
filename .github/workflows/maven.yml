@@ -65,7 +65,7 @@ jobs:
            -DartifactId=ojdbc8
            -Dversion=19.3.0.0
            -Dpackaging=jar
-            -X
+            #-X
            #-B package --file pox.xml
     - name: create folder
       run: mkdir save && cp /home/runner/work/sprintboot-app/sprintboot-app/target/test-0.0.1-SNAPSHOT-boot.war save
