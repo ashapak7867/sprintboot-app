@@ -23,51 +23,11 @@ jobs:
         distribution: 'temurin'
         cache: maven
         
-   # - name: working dir
-    #  run: ls
-    - name: Checkout job
-      run: |
-            ls
-            # git merge sub-branch
-            #git reflog
-            #git ls-files --others ojdbc8.19.3.0.0..jar
-            #git add ojdbc8.19.3.0.0..jar
-           # git checkout main sub-branch ojdbc8.19.3.0.0.jar
-            #git fetch
-            #git checkout -b sub-branch 
-    #  uses: actions/checkout@v2
-       #with:
-       #  repository: ashapak7867/java-spring-app
-        # ref: main
-         #path: ./java-spring-app
-         #run: ls
-         
-   # - name: checkout file 
-   #   run: |
-            
-            #eval "$(ssh-agent -s)"
-            #ssh-keygen -t rsa -b 4096 -C "my@ashapak7867.com" -f /home/runner/work/to/key.pub
-            #ssh-add -l -E sha256
-            #2048 SHA256:274ffWxgaxq/tSINAykStUL7XWyRNcRTlcST1Ei7gBQ /java-spring-app/ashapak7867/.ssh/id_rsa (RSA)
-            #ssh-add ~/.ssh/id_rsa
-            #git remote add origin git@github.com:ashapak7867/sprintboot-app.git
-            #git remote set-url origin git@github.com:ashapak7867/java-spring-app.git
-            #git push -u origin main
-        
-        
     - name: Build with Maven
-     # run:  mvn -c WORKDIR /usr/src/sub-branch/ojdbc8.19.3.0.0.jar -B package --file pom.xml
-     
-     # run: mvn -s $GITHUB_WORKSPACE/.github/workflows/setting.xml -B package --file pom.xml 
-      run:  mvn install:install-file
-             -Dfile= ${GITHUB_WORKSPACE}/sub-branch/ojdbc8-19.3.0.0.jar
-             -DgroupId=com.oracle
-             -DartifactId=ojdbc8
-             -Dversion=19.3.0.0
-             -Dpackaging=jar
-             -X
-             
-           #-B package --file pox.xml
+      run: mvn -s $GITHUB_WORKSPACE/.github/workflows/settings.xml -B package --file pom.xml 
+      env:
+        USER_NAME: ${{ secrets.USER_NAME }}
+        ACCESS_TOKEN: ${{ secrets.PAT_ACCESS }}
     - name: create folder
       run: mkdir save && cp /home/runner/work/sprintboot-app/sprintboot-app/target/test-0.0.1-SNAPSHOT-boot.war save
     - name: upload artifiacts
